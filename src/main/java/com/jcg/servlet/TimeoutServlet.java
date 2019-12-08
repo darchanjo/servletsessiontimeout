@@ -35,7 +35,7 @@ public class TimeoutServlet extends HttpServlet {
 
 		/***** Post Parameters From The Request *****/
 		String param1 = request.getParameter("username");
-		if (param1 != null && !param1.equals("")) {
+		if (param1 != null && !"".equals(param1)) {
 
 			int timeout = 60 * 2;
 			HttpSession sessionObj = request.getSession(true);
